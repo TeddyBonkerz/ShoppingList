@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:14.1-alpine
+    restart: always
+    ports:
+      - '5432:5432'
+    hostname: postgres
+    container_name: postgres-container
+    environment:
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'postgres'
+  pgadmin4:
+    image: fenglc/pgadmin4:latest
+    ports:
+      - '5050:5050'
+    hostname: pgadmin4
+    container_name: pgadmin4
+    environment:
+      DEFAULT_USER: 'pgadmin4@pgadmin.org'
+      DEFAULT_PASSWORD: 'admin'
