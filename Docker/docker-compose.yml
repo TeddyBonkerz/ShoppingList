@@ -8,6 +8,7 @@ services:
     hostname: postgres
     container_name: postgres-container
     environment:
+      POSTGRES_DB: 'shopper'
       POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: 'postgres'
   pgadmin4:
