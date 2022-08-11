@@ -10,6 +10,7 @@ services:
     environment:
       POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: 'postgres'
+      POSTGRES_DB: 'shopper'
   pgadmin4:
     image: fenglc/pgadmin4:latest
     ports:
