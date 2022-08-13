@@ -6,11 +6,13 @@ services:
     ports:
       - '5432:5432'
     hostname: postgres
-    container_name: postgres-container
+    container_name: shopper-postgresDB
     environment:
       POSTGRES_DB: 'shopper'
       POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: 'postgres'
+    volumes:
+      - shopperData:/var/lib/postgresql/data
   pgadmin4:
     image: fenglc/pgadmin4:latest
     ports:
@@ -18,5 +20,8 @@ services:
     hostname: pgadmin4
     container_name: pgadmin4
     environment:
-      DEFAULT_USER: 'pgadmin4@pgadmin.org'
+      DEFAULT_USER: 'pgadmin4'
       DEFAULT_PASSWORD: 'admin'
+volumes:
+  shopperData:
+    external: true
