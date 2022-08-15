@@ -12,16 +12,7 @@ services:
       POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: 'postgres'
     volumes:
-      - shopperData:/var/lib/postgresql/data
-  pgadmin4:
-    image: fenglc/pgadmin4:latest
-    ports:
-      - '5050:5050'
-    hostname: pgadmin4
-    container_name: pgadmin4
-    environment:
-      DEFAULT_USER: 'pgadmin4'
-      DEFAULT_PASSWORD: 'admin'
+      - ./data/shopperData:/var/lib/postgresql/data
 volumes:
   shopperData:
     external: true
