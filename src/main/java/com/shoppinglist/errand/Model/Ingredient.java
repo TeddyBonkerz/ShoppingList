@@ -2,7 +2,6 @@ package com.shoppinglist.errand.Model;
 
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
 
 @NoArgsConstructor
 public class Ingredient {
