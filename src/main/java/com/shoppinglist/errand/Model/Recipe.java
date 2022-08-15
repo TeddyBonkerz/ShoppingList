@@ -19,14 +19,9 @@ public class Recipe {
     private String description;
     private String ingredients;
 
-    public Recipe(String id, String name, String description){
-        this.id = id;
+    public Recipe(String name, String description){
         this.name = name;
         this.description = description;
-    }
-
-    public Recipe(String ingredients){
-        this.ingredients = ingredients;
     }
 
     public String getId() {
