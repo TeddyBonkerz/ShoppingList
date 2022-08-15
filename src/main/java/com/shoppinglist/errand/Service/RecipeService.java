@@ -19,7 +19,7 @@ public class RecipeService {
     private final RecipeRepository recipeRepository;
 
     @Autowired
-    public RecipeService(RecipeRepository recipeRepository){
+    public RecipeService(RecipeRepository recipeRepository) {
         this.recipeRepository = recipeRepository;
     }
 
@@ -27,7 +27,7 @@ public class RecipeService {
         return recipeRepository.findById(id);
     }
 
-    public List<Recipe> getRecipes(){
+    public List<Recipe> getRecipes() {
         return recipeRepository.findAll();
     }
 
@@ -36,7 +36,7 @@ public class RecipeService {
     }
 
     public void deleteRecipe(String id) {
-       boolean exists =  recipeRepository.existsById(id);
+        boolean exists = recipeRepository.existsById(id);
         if (!exists) {
             throw new IllegalStateException("Recipe does not exist");
         }
@@ -50,10 +50,10 @@ public class RecipeService {
                         "Recipe does not exist"
                 ));
 
-        if(recipe.getName() != null && !Objects.equals(oldRecipe.getName(), recipe.getName())){
+        if (recipe.getName() != null && !Objects.equals(oldRecipe.getName(), recipe.getName())) {
             oldRecipe.setName(recipe.getName());
         }
-        if(recipe.getDescription() != null && !Objects.equals(oldRecipe.getDescription(), recipe.getDescription())){
+        if (recipe.getDescription() != null && !Objects.equals(oldRecipe.getDescription(), recipe.getDescription())) {
             oldRecipe.setDescription(recipe.getDescription());
         }
 

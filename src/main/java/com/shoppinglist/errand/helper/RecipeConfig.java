@@ -1,9 +1,5 @@
 package com.shoppinglist.errand.helper;
 
-import com.shoppinglist.errand.Model.Recipe;
-import com.shoppinglist.errand.Repositories.RecipeRepository;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration

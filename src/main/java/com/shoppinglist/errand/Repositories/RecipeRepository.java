@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
-public interface RecipeRepository extends JpaRepository<Recipe, String>{
+public interface RecipeRepository extends JpaRepository<Recipe, String> {
 
     @Override
     Optional<Recipe> findById(String id);
