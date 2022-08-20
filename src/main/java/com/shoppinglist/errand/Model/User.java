@@ -1,67 +1,79 @@
 package com.shoppinglist.errand.Model;
 
+import com.shoppinglist.errand.helper.UserRole;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Collection;
+import java.util.Collections;
 
+@Getter
+@Setter
 @NoArgsConstructor
-public class User {
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
+    private String name;
     private String userName;
     private String email;
     private String password;
+    @Enumerated(EnumType.STRING)
+    private UserRole userRole;
+    private Boolean isLocked;
+    private Boolean isEnabled;
 
-    public User(String id, String userName, String email, String password) {
-        this.id = id;
+    public User(String name, String userName, String email, String password,
+                UserRole userRole, Boolean isLocked, Boolean isEnabled) {
+        this.name = name;
         this.userName = userName;
         this.email = email;
         this.password = password;
+        this.userRole = userRole;
+        this.isLocked = isLocked;
+        this.isEnabled = isEnabled;
     }
 
-    public String getId() {
-        return id;
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        SimpleGrantedAuthority authority =
+                new SimpleGrantedAuthority(userRole.name());
+        return Collections.singletonList(authority);
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
+    @Override
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    @Override
+    public String getUsername() {
+        return userName;
     }
 
     @Override
-    public String toString() {
-        return "User{" +
-                "id='" + id + '\'' +
-                ", userName='" + userName + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return !isLocked;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return isEnabled;
     }
 }
