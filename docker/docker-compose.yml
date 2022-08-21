@@ -11,8 +11,8 @@ services:
       POSTGRES_DB: 'shopper'
       POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: 'postgres'
-    volumes:
-      - shopperData:/var/lib/postgresql/data
-volumes:
-  shopperData:
-    external: true
+#    volumes:
+#      - shopperData:/var/lib/postgresql/data
+#volumes:
+#  shopperData:
+#    external: true
