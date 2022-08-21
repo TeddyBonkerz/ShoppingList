@@ -1,4 +1,4 @@
-package com.shoppinglist.errand.UserRegistration;
+package com.shoppinglist.errand.userRegistration;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

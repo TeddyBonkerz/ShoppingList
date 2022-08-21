@@ -1,7 +1,6 @@
-package com.shoppinglist.errand.UserRegistration;
+package com.shoppinglist.errand.userRegistration;
 
 import lombok.AllArgsConstructor;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

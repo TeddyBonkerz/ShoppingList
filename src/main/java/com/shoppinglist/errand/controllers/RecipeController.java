@@ -1,9 +1,9 @@
-package com.shoppinglist.errand.Controllers;
+package com.shoppinglist.errand.controllers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.shoppinglist.errand.Model.Ingredient;
-import com.shoppinglist.errand.Model.Recipe;
-import com.shoppinglist.errand.Service.RecipeService;
+import com.shoppinglist.errand.model.Ingredient;
+import com.shoppinglist.errand.model.Recipe;
+import com.shoppinglist.errand.service.RecipeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

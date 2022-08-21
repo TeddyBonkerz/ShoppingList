@@ -1,6 +1,6 @@
-package com.shoppinglist.errand.Repositories;
+package com.shoppinglist.errand.repository;
 
-import com.shoppinglist.errand.Model.Recipe;
+import com.shoppinglist.errand.model.Recipe;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

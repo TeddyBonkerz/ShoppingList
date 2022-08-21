@@ -1,4 +1,4 @@
-package com.shoppinglist.errand.helper;
+package com.shoppinglist.errand.configuration;
 
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;

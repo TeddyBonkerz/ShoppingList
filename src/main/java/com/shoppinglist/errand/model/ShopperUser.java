@@ -1,6 +1,6 @@
-package com.shoppinglist.errand.Model;
+package com.shoppinglist.errand.model;
 
-import com.shoppinglist.errand.helper.ShopperUserRole;
+import com.shoppinglist.errand.configuration.ShopperUserRole;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

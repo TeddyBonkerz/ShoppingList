@@ -1,4 +1,4 @@
-package com.shoppinglist.errand.helper;
+package com.shoppinglist.errand.configuration;
 
 public enum ShopperUserRole {
     USER, ADMIN

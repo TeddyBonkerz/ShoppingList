@@ -1,6 +1,6 @@
-package com.shoppinglist.errand.Repositories;
+package com.shoppinglist.errand.repository;
 
-import com.shoppinglist.errand.Model.ShopperUser;
+import com.shoppinglist.errand.model.ShopperUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;

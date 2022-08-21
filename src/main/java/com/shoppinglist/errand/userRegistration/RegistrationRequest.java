@@ -1,9 +1,8 @@
-package com.shoppinglist.errand.UserRegistration;
+package com.shoppinglist.errand.userRegistration;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.Setter;
 
 @Getter
 @AllArgsConstructor

@@ -1,6 +1,6 @@
-package com.shoppinglist.errand.Service;
+package com.shoppinglist.errand.service;
 
-import com.shoppinglist.errand.Repositories.ShopperUserRepository;
+import com.shoppinglist.errand.repository.ShopperUserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

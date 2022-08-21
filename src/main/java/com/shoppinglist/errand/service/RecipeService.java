@@ -1,10 +1,10 @@
-package com.shoppinglist.errand.Service;
+package com.shoppinglist.errand.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.shoppinglist.errand.Model.Ingredient;
-import com.shoppinglist.errand.Model.Recipe;
-import com.shoppinglist.errand.Repositories.RecipeRepository;
+import com.shoppinglist.errand.model.Ingredient;
+import com.shoppinglist.errand.model.Recipe;
+import com.shoppinglist.errand.repository.RecipeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

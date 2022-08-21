@@ -1,6 +1,6 @@
 package com.shoppinglist.errand.security.config;
 
-import com.shoppinglist.errand.Service.ShopperUserService;
+import com.shoppinglist.errand.service.ShopperUserService;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.shoppinglist.errand.Model;
+package com.shoppinglist.errand.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
