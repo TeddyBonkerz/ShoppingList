@@ -19,7 +19,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfiguration {
 
-    private final ShopperUserService shopperUserService;
+    private final ShopperUserService userService;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Bean
@@ -56,7 +56,7 @@ public class SecurityConfiguration {
     public DaoAuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
 
-        authProvider.setUserDetailsService(shopperUserService);
+        authProvider.setUserDetailsService(userService);
         authProvider.setPasswordEncoder(bCryptPasswordEncoder);
 
         return authProvider;

@@ -4,6 +4,7 @@ import com.shoppinglist.errand.configuration.ShopperUserRole;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,32 +20,31 @@ import java.util.Collections;
 public class ShopperUser implements UserDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
-    private String name;
-    private String userName;
+    private String firstName;
+    private String lastName;
     private String email;
     private String password;
     @Enumerated(EnumType.STRING)
-    private ShopperUserRole shopperUserRole;
-    private Boolean isLocked;
-    private Boolean isEnabled;
+    private ShopperUserRole userRole;
+    private Boolean isLocked = false;
+    private Boolean isEnabled = false;
 
-    public ShopperUser(String name, String userName, String email, String password,
-                       ShopperUserRole shopperUserRole, Boolean isLocked, Boolean isEnabled) {
-        this.name = name;
-        this.userName = userName;
+    public ShopperUser(String firstName, String lastName, String email, String password,
+                       ShopperUserRole userRole) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.shopperUserRole = shopperUserRole;
-        this.isLocked = isLocked;
-        this.isEnabled = isEnabled;
+        this.userRole = userRole;
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         SimpleGrantedAuthority authority =
-                new SimpleGrantedAuthority(shopperUserRole.name());
+                new SimpleGrantedAuthority(userRole.name());
         return Collections.singletonList(authority);
     }
 
@@ -55,7 +55,7 @@ public class ShopperUser implements UserDetails {
 
     @Override
     public String getUsername() {
-        return userName;
+        return email;
     }
 
     @Override
