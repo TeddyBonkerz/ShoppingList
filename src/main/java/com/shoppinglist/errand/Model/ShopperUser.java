@@ -1,6 +1,6 @@
 package com.shoppinglist.errand.Model;
 
-import com.shoppinglist.errand.helper.UserRole;
+import com.shoppinglist.errand.helper.ShopperUserRole;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,8 +14,9 @@ import java.util.Collections;
 
 @Getter
 @Setter
+@Entity
 @NoArgsConstructor
-public class User implements UserDetails {
+public class ShopperUser implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,17 +26,17 @@ public class User implements UserDetails {
     private String email;
     private String password;
     @Enumerated(EnumType.STRING)
-    private UserRole userRole;
+    private ShopperUserRole shopperUserRole;
     private Boolean isLocked;
     private Boolean isEnabled;
 
-    public User(String name, String userName, String email, String password,
-                UserRole userRole, Boolean isLocked, Boolean isEnabled) {
+    public ShopperUser(String name, String userName, String email, String password,
+                       ShopperUserRole shopperUserRole, Boolean isLocked, Boolean isEnabled) {
         this.name = name;
         this.userName = userName;
         this.email = email;
         this.password = password;
-        this.userRole = userRole;
+        this.shopperUserRole = shopperUserRole;
         this.isLocked = isLocked;
         this.isEnabled = isEnabled;
     }
@@ -43,7 +44,7 @@ public class User implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         SimpleGrantedAuthority authority =
-                new SimpleGrantedAuthority(userRole.name());
+                new SimpleGrantedAuthority(shopperUserRole.name());
         return Collections.singletonList(authority);
     }
 

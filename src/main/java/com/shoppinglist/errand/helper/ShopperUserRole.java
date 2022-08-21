@@ -1,5 +1,5 @@
 package com.shoppinglist.errand.helper;
 
-public enum UserRole {
+public enum ShopperUserRole {
     USER, ADMIN
 }
