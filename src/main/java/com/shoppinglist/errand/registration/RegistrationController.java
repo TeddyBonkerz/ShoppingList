@@ -1,7 +1,5 @@
-package com.shoppinglist.errand.registration.controller;
+package com.shoppinglist.errand.registration;
 
-import com.shoppinglist.errand.registration.model.RegistrationRequest;
-import com.shoppinglist.errand.registration.service.RegistrationService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

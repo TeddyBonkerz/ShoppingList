@@ -1,4 +1,4 @@
-package com.shoppinglist.errand.registration.model;
+package com.shoppinglist.errand.registration;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

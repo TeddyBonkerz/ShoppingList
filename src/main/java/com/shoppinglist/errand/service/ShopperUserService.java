@@ -2,7 +2,7 @@ package com.shoppinglist.errand.service;
 
 import com.shoppinglist.errand.model.ShopperUser;
 import com.shoppinglist.errand.registration.ConfirmationTokenRepository;
-import com.shoppinglist.errand.registration.model.ConfirmationToken;
+import com.shoppinglist.errand.registration.ConfirmationToken;
 import com.shoppinglist.errand.repository.ShopperUserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;

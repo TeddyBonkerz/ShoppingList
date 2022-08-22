@@ -1,7 +1,7 @@
-package com.shoppinglist.errand.registration.service;
+package com.shoppinglist.errand.registration;
 
 import com.shoppinglist.errand.registration.ConfirmationTokenRepository;
-import com.shoppinglist.errand.registration.model.ConfirmationToken;
+import com.shoppinglist.errand.registration.ConfirmationToken;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

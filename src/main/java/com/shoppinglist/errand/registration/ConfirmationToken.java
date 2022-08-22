@@ -1,4 +1,4 @@
-package com.shoppinglist.errand.registration.model;
+package com.shoppinglist.errand.registration;
 
 import com.shoppinglist.errand.model.ShopperUser;
 import lombok.Getter;

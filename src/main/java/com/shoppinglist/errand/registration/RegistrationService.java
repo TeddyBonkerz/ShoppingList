@@ -1,10 +1,11 @@
-package com.shoppinglist.errand.registration.service;
+package com.shoppinglist.errand.registration;
 
 import com.shoppinglist.errand.configuration.ShopperUserRole;
 import com.shoppinglist.errand.helper.EmailValidator;
 import com.shoppinglist.errand.model.ShopperUser;
-import com.shoppinglist.errand.registration.model.ConfirmationToken;
-import com.shoppinglist.errand.registration.model.RegistrationRequest;
+import com.shoppinglist.errand.registration.ConfirmationToken;
+import com.shoppinglist.errand.registration.ConfirmationTokenService;
+import com.shoppinglist.errand.registration.RegistrationRequest;
 import com.shoppinglist.errand.service.ShopperUserService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
