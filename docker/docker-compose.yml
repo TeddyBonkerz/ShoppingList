@@ -1,5 +1,10 @@
 version: '3.8'
 services:
+  maildev:
+    container_name: mail_dev
+    image: maildev/maildev
+    ports:
+      - '1080:1080'
   db:
     image: postgres:14.1-alpine
     restart: always
