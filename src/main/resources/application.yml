@@ -10,7 +10,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: create
     show-sql: true
     properties:
       hibernate:
@@ -24,6 +24,12 @@ springdoc:
 server:
   error:
     include-message: always
+
+mail:
+  host: localhost
+  port: 1025
+  username: admin
+  password: admin
 
 sonar:
   java:

@@ -1,10 +1,24 @@
 version: '3.8'
 services:
+  # Maildev server for testing mailing functionality
   maildev:
     container_name: mail_dev
     image: maildev/maildev
     ports:
       - '1080:1080'
+
+  # SonarQube server
+#  sonar:
+#    container_name: sonarQube
+#    image: sonarqube:8.9-community
+#    depends_on:
+#      - db
+#    environment:
+#      SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: 'true'
+#    ports:
+#      - '9000:9000'
+
+  # Postgres database for application data
   db:
     image: postgres:14.1-alpine
     restart: always
