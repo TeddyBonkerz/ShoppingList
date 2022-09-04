@@ -10,7 +10,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
     show-sql: true
     properties:
       hibernate:
@@ -24,3 +24,11 @@ springdoc:
 server:
   error:
     include-message: always
+
+sonar:
+  java:
+    coveragePlugin: jacoco
+  dynamicAnalysis: reuseReports
+  jacoco:
+    reportPath: ${project.basedir}/../target/jacoco.exec
+  language: java
