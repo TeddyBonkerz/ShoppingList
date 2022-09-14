@@ -14,8 +14,8 @@ public class JavaMailConfig {
     }
 //    CommandLineRunner commandLineRunner(RecipeRepository recipeRepository){
 //        return args -> {
-//            Recipe baby = new Recipe("IJ", "Recipe for Ijs baby over");
-//            recipeRepository.save(baby);
+//            Recipe recipe = new Recipe("Gozleme", "Recipe for turkis dish");
+//            recipeRepository.save(hmm);
 //        };
 //    }
 }

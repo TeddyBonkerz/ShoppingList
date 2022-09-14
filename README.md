@@ -1,5 +1,5 @@
 # Running App
-- mvn clean install`
+- mvn clean install
 
 ### Start Postgres Database
 Run this command with docker desktop app open.
