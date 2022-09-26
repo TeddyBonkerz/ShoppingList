@@ -17,6 +17,24 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
 
+#  mail:
+#    host: localhost
+#    port: 1025
+#    username: admin
+#    password: admin
+#
+#    properties:
+#      mail:
+#        smtp:
+#          ssl:
+#            trust: "*"
+#          auth: true
+#          starttls:
+#            enable: true
+#          connectiontimeout: 5000
+#          timeout: 3000
+#          writetimeout: 5000
+
 springdoc:
   swagger-ui:
     disable-swagger-default-url: true
@@ -24,12 +42,6 @@ springdoc:
 server:
   error:
     include-message: always
-
-mail:
-  host: localhost
-  port: 1025
-  username: admin
-  password: admin
 
 sonar:
   java:

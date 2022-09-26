@@ -12,10 +12,4 @@ public class JavaMailConfig {
     public JavaMailSender javaMailSender(){
         return new JavaMailSenderImpl();
     }
-//    CommandLineRunner commandLineRunner(RecipeRepository recipeRepository){
-//        return args -> {
-//            Recipe recipe = new Recipe("Gozleme", "Recipe for turkis dish");
-//            recipeRepository.save(hmm);
-//        };
-//    }
 }
