@@ -17,7 +17,7 @@ public class RegistrationService {
     private final ShopperUserService userService;
     private final EmailValidator emailValidator;
 
-    private final EmailSender emailSender;
+    //private final EmailSender emailSender;
 
     private final ConfirmationTokenService confirmationTokenService;
 
@@ -36,10 +36,10 @@ public class RegistrationService {
 
         String token = userService.signUp(user);
 
-        String confirmationLink = "http://localhost:8080/api/v1/register/confirm?token=" + token;
-        emailSender.send(
-                request.getEmail(),
-                buildEmail(request.getFirstName(), confirmationLink));
+//        String confirmationLink = "http://localhost:8080/api/v1/register/confirm?token=" + token;
+//        emailSender.send(
+//                request.getEmail(),
+//                buildEmail(request.getFirstName(), confirmationLink));
 
         return token;
     }
