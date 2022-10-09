@@ -43,10 +43,10 @@ server:
   error:
     include-message: always
 
-sonar:
-  java:
-    coveragePlugin: jacoco
-  dynamicAnalysis: reuseReports
-  jacoco:
-    reportPath: ${project.basedir}/../target/jacoco.exec
-  language: java
+#sonar:
+#  java:
+#    coveragePlugin: jacoco
+#  dynamicAnalysis: reuseReports
+#  jacoco:
+#    reportPath: ${project.basedir}/../target/jacoco.exec
+#  language: java
