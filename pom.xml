@@ -18,6 +18,12 @@
 
     <properties>
         <java.version>17</java.version>
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
+        <sonar.java.binaries>target/classes</sonar.java.binaries>
+        <sonar.projectKey>sqp_8fc5f6f4f6fde705fa0e6e523a380cdc1d43722b</sonar.projectKey>
+        <sonar.projectName>ErrandApp</sonar.projectName>
+        <sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
+        <sonar.login>178f77b2bbee88b22ccd97bc7fd32cfa84c10985</sonar.login>
     </properties>
 
     <dependencies>
