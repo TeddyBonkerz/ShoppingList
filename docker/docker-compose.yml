@@ -14,7 +14,7 @@ services:
     depends_on:
       - db
     environment:
-      SONARQUBE_JDBC_URL: jdbc:postgresql://db:5432/postgres
+      SONARQUBE_JDBC_URL: jdbc:postgresql://db:5432/shopper
       SONARQUBE_JDBC_USERNAME: postgres
       SONARQUBE_JDBC_PASSWORD: postgres
       SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: 'true'
