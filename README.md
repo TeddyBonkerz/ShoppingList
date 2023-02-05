@@ -19,3 +19,7 @@ Commands to navigate Postgres Database via command line.
 - `\l (list DBs)`
 - `\c shopper (connect to database)`
 - `\d (describe)`
+- `\dt (list all tables`
+
+### Swagger Docs
+http://localhost:8080/swagger-ui/index.html
